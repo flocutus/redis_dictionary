@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module I18nDashboard
   module ApplicationHelper
     def title(page_title, show_title = true)
