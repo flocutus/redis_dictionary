@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 require_dependency "i18n_dashboard/application_controller"
 
 module I18nDashboard

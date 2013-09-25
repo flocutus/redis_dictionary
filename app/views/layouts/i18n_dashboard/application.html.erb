@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      <%= content_for?(:title) ? (yield(:title) + " - I18n Dashboard") : "I18n Dashboard" %>
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Fourmach.com" name="author"/>
+    <%= stylesheet_link_tag "i18n_dashboard/application", media: nil %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements
+    -->
+    <!--[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    -->
+    <%= csrf_meta_tag %>
+  </head>
+  <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
+    <!-- = render 'application/admin_menu'
+    -->
+    <div class="container">
+      <h1>
+        <%= yield(:title) %>
+      </h1>
+      <div id="flash">
+        <% flash.each do |key, value| %>
+          <div class="alert-<%= key %> alert">
+            <%= value %>
+          </div>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag "i18n_dashboard/application" %>
+  </body>
+</html>
