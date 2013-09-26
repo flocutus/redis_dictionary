@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name        = "i18n_dashboard"
   s.version     = I18nDashboard::VERSION
   s.authors     = ["Fourmach", "José Galisteo Ruiz", "redrick"]
-  s.email       = ["ceritium@gmail.com"]
+  s.email       = ["cheaterblue@gmail.com"]
   s.homepage    = "https://github.com/redrick/i18n_dashboard"
   s.summary     = "Rails Engine for I18n management with redis as backend."
 
