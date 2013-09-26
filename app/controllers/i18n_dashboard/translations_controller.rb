@@ -8,7 +8,7 @@ module I18nDashboard
 
     def index
       unless params[:query].blank?
-       @translations = Translation.all.select{|j| j =~ /^#{params[:query]}$/}
+       @translations = Translation.all.select{|j| j =~ /#{params[:query]}/}
       else
         @translations = Translation.all
       end
