@@ -11,12 +11,12 @@
   <% end %>
   <td>
     <% unless I18nDashboard::Translation.system_key?(key) %>
-      <%= link_to translation_path(I18nDashboard::Translation.digest_key(key)), id: "destroy-#{I18nDashboard::Translation.digest_key(key)}", method: :delete, class: 'btn btn-mini btn-danger', remote: true do %>
+      <%= link_to translation_path(I18nDashboard::Translation.digest_key(key)), id: "destroy-#{I18nDashboard::Translation.digest_key(key)}", method: :delete, class: 'btn btn-mini btn-danger flr', data: {confirm: "Do you really want to proceed ?"}, remote: true do %>
         <span class="hidden">destroy</span>
         <i class="icon-trash"></i>
       <% end %>
     <% else %>
-        <div class="btn btn-inverse btn-mini">Framework</div>
+        <div class="btn btn-inverse btn-mini flr">Framework</div>
     <% end %>
   </td>
 </tr>
