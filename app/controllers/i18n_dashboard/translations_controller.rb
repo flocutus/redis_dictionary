@@ -3,6 +3,7 @@ require_dependency "i18n_dashboard/application_controller"
 
 module I18nDashboard
   class TranslationsController < I18nDashboard::ApplicationController
+    respond_to :json, :html, :js    
 
     i18n_dashboard_authenticate
 
@@ -39,6 +40,11 @@ module I18nDashboard
         }
       end
 
+    end
+
+    def get
+      locale ||= params[:lang]
+      respond_with t params[:key], locale: locale
     end
 
   end
