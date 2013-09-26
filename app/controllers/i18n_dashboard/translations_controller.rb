@@ -7,7 +7,11 @@ module I18nDashboard
     i18n_dashboard_authenticate
 
     def index
-       @translations = Translation.all(params[:query])
+      unless params[:query].blank?
+       @translations = Translation.all.select{|j| j =~ /^#{params[:query]}$/}
+      else
+        @translations = Translation.all
+      end
     end
 
     def create
