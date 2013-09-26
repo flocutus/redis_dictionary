@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "redis"
   s.add_dependency "coffee-rails"
   s.add_dependency 'uglifier'
+  s.add_dependency 'will_paginate'
 
   s.add_dependency "therubyracer"
   s.add_dependency "less-rails"

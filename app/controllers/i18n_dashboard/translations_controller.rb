@@ -8,9 +8,11 @@ module I18nDashboard
 
     def index
       unless params[:query].blank?
-       @translations = Translation.all.select{|j| j =~ /#{params[:query]}/}
+       @translations = (params[:query] == '*') ? 
+                        Translation.all.select{|j| j =~ /^#{params[:query]}$/}.paginate(:page => params[:page], :per_page => 15) :  
+                        Translation.all.select{|j| j =~ /#{params[:query]}/}.paginate(:page => params[:page], :per_page => 15)
       else
-        @translations = Translation.all
+        @translations = Translation.all.paginate(:page => params[:page], :per_page => 15)
       end
     end
 

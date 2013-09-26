@@ -32,7 +32,7 @@
 <div class="navbar">
   <div class="navbar-inner">
     <%= form_tag translations_path, class: 'navbar-form pull-left', method: :get, id: 'search-form' do %>
-      <%= text_field_tag :query, params[:query], hint: 'Search', autofocus: true %>
+      <%= text_field_tag :query, params[:query], hint: 'Search', placeholder: 'Search', autofocus: true %>
       <%= button_tag 'search', class: 'btn' %>
       <%= link_to 'clear', translations_path, class: 'btn' %>
     <% end %>
@@ -42,6 +42,11 @@
   </div>
 </div>
 <hr/>
+
+<div class="apple_pagination">
+  <%= will_paginate @translations, :container => false %>
+</div>
+
 <table class="table table-hover" id="translations-table">
   <thead>
     <th>key</th>
@@ -57,3 +62,8 @@
     <% end %>
   </tbody>
 </table>
+
+
+<div class="apple_pagination">
+  <%= will_paginate @translations, :container => false %>
+</div>
