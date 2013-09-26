@@ -2,7 +2,7 @@
 require_dependency "i18n_dashboard/application_controller"
 
 module I18nDashboard
-  class TranslationsController < ::I18nDashboard::ApplicationController
+  class TranslationsController < I18nDashboard::ApplicationController
 
     i18n_dashboard_authenticate
 

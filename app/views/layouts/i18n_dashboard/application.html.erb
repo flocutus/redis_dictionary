@@ -22,13 +22,7 @@
       <h1>
         <%= yield(:title) %>
       </h1>
-      <div id="flash">
-        <% flash.each do |key, value| %>
-          <div class="alert-<%= key %> alert">
-            <%= value %>
-          </div>
-        <% end %>
-      </div>
+      
       <%= yield %>
     </div>
     <%= javascript_include_tag "i18n_dashboard/application" %>

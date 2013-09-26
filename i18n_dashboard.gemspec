@@ -8,23 +8,25 @@ require "i18n_dashboard/version"
 Gem::Specification.new do |s|
   s.name        = "i18n_dashboard"
   s.version     = I18nDashboard::VERSION
-  s.authors     = ["Fourmach", "José Galisteo Ruiz"]
+  s.authors     = ["Fourmach", "José Galisteo Ruiz", "redrick"]
   s.email       = ["ceritium@gmail.com"]
-  s.homepage    = "http://fourmach.com"
+  s.homepage    = "https://github.com/redrick/i18n_dashboard"
   s.summary     = "Rails Engine for I18n management with redis as backend."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.required_ruby_version     = '>= 1.9.3'
+  # s.required_ruby_version     = '>= 1.9.3'
 
   s.add_dependency "rails"
   s.add_dependency "jquery-rails"
+  s.add_dependency "jquery-ui-rails"
   s.add_dependency "redis"
-  s.add_dependency "haml-rails"
-  s.add_dependency "less-rails"
   s.add_dependency "coffee-rails"
   s.add_dependency 'uglifier'
+
+  s.add_dependency "therubyracer"
+  s.add_dependency "less-rails"
   s.add_dependency 'twitter-bootstrap-rails'
 
   s.add_development_dependency "simplecov"

@@ -1,11 +1,11 @@
 # encoding: utf-8
 
 module I18nDashboard
-  class ApplicationController < ::ApplicationController
+  class ApplicationController < ActionController::Base
 
     layout I18nDashboard.configuration.layout if I18nDashboard.configuration.layout
 
-    # Sets a class method to specify a before-filter calling
+    # Sets a class method to specify a before-filter csalling
     # whatever I18nDashboard.configuration.authentication_method is set to
     # Accepts the usual before_filter optionss
     def self.i18n_dashboard_authenticate(options ={})
