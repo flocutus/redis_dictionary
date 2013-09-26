@@ -17,7 +17,9 @@
   </head>
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
     <div class="container">
-      <h1><%= yield(:title) %></h1>
+      <h1>
+        <a href="<%= translations_path %>"><%= yield(:title) %></a>
+      </h1>
 
       <div class="navbar">
         <div class="navbar-inner">
