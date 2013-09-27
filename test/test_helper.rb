@@ -2,6 +2,7 @@
 require 'simplecov'
 require 'coveralls'
 require 'coffee_script'
+Coveralls.wear!
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
