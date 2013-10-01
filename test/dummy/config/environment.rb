@@ -3,4 +3,4 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 Dummy::Application.initialize!
-I18nDashboard::Engine.load!
+RedisDictionary::Engine.load!

@@ -34,7 +34,7 @@ if ActiveSupport::TestCase.method_defined?(:fixture_path=)
 end
 
 class ActionController::TestCase
-  include I18nDashboard::Engine.routes.url_helpers
+  include RedisDictionary::Engine.routes.url_helpers
 end
 
 class ActionDispatch::IntegrationTest

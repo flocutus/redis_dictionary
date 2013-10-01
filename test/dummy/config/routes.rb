@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount I18nDashboard::Engine => "/"
+  mount RedisDictionary::Engine => "/"
 end

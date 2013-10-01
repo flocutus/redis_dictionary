@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      <%= content_for?(:title) ? (yield(:title) + " - I18n Dashboard") : "I18n Dashboard" %>
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Fourmach.com" name="author"/>
+    <%= stylesheet_link_tag "redis_dictionary/application", media: nil %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements
+    -->
+    <!--[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    -->
+    <%= csrf_meta_tag %>
+  </head>
+  <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
+    <div class="container">
+      <h1>
+        <a href="<%= translations_path %>"><%= yield(:title) %></a>
+      </h1>
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <%= link_to 'All', translations_path(query: "*"), class: 'btn' %>
+          <%= link_to 'Activerecord', translations_path(query: "activerecord"), class: 'btn' %>
+          <%= link_to 'Date / Time', translations_path(query: "date|time"), class: 'btn' %>
+          <%= link_to 'Error', translations_path(query: "error"), class: 'btn' %>
+          <%= link_to 'Number', translations_path(query: "number."), class: 'btn' %>
+          <%= link_to 'Pagination', translations_path(query: "paginate"), class: 'btn' %>
+        </div>
+      </div>
+
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <div class="container">
+      </div>
+    </div>
+    <%= javascript_include_tag "redis_dictionary/application" %>
+  </body>
+</html>

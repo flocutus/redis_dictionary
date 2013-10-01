@@ -1,1 +1,1 @@
-I18nDashboard::Engine.load!
+RedisDictionary::Engine.load!
