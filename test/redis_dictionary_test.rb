@@ -19,4 +19,3 @@ class RedisDictionaryTest < ActiveSupport::TestCase
   end
 
 end
-§
