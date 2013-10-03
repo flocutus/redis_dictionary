@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/redrick/redis_dictionary.png?branch=master)](https://travis-ci.org/redrick/redis_dictionary)
 [![Coverage Status](https://coveralls.io/repos/redrick/redis_dictionary/badge.png?branch=master)](https://coveralls.io/r/redrick/redis_dictionary?branch=master)
+[![Gem Version](https://badge.fury.io/rb/redis_dictionary.png)](http://badge.fury.io/rb/redis_dictionary)
 
 Rails frontend for i18n with redis backend as extended version of [fourmach/i18n_dashboard](https://github.com/fourmach/i18n_dashboard) gem.
 
