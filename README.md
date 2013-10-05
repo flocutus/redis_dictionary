@@ -29,7 +29,6 @@ $ bundle
 And finally execute:
 
 ```
-
 $ rails g redis_dictionary:install
 ```
 
