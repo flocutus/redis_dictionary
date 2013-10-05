@@ -32,9 +32,30 @@ And finally execute:
 $ rails g redis_dictionary:install
 ```
 
+### IMPORTANT
+
+If you were installing before 5.10.2013, please remove this line: 
+
+``` ruby
+RedisDictionary::Engine.load!
+```
+
+from your ```config/initializers/redis_dictionary.rb``` to ```config/environment.rb```
+(now just reinstall and everything should be fine)
+Sorry for the inconvinience, and do not be affraid to write me if you need some help :)
+
 
 ## Thanks
   
   * [Jose Galisteo](https://github.com/ceritium) for writing [I18n_dashboard](https://github.com/fourmach/i18n_dashboard)
   * [Alberto Fernández-Capel](https://github.com/afcapel): [Setup integration tests with capybara](https://github.com/fourmach/i18n_dashboard/pull/1)
   * Great tips of [Blogit](https://github.com/KatanaCode/blogit).
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
