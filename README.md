@@ -23,13 +23,14 @@ gem 'redis_dictionary'
 
 And then execute:
 
-    $ bundle
-
+```
+$ bundle
+```
 And finally execute:
 
-``` ruby
+```
 
-rails g redis_dictionary:install
+$ rails g redis_dictionary:install
 ```
 
 
