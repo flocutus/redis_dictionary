@@ -1,1 +1,0 @@
-RedisDictionary::Engine.load!

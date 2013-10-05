@@ -25,32 +25,11 @@ And then execute:
 
     $ bundle
 
-Modify your config/routes.rb and add:
+And finally execute:
 
 ``` ruby
-mount RedisDictionary::Engine => '/translations'
-```
 
-### !IMPORTANT!
-I have just realized I put these down, but I found out you got to do it by yourself:
-
-In your config/environment.rb add:
-
-``` ruby
-RedisDictionary::Engine.load!
-```
-otherwise the dictionary would not initialize properly
-
-and for example, here is my ```config/initializers/i18n.rb```
-
-```
-TRANSLATION_STORE = Redis.new
-I18n.backend = I18n::Backend::Chain.new(I18n::Backend::KeyValue.new(TRANSLATION_STORE), I18n.backend)
-
-I18n.available_locales = [:en, :cs]
-I18n.default_locale = :cs
-
-RedisDictionary::Engine.redis = TRANSLATION_STORE
+rails g redis_dictionary:install
 ```
 
 
