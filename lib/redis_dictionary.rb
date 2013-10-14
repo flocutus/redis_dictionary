@@ -2,6 +2,7 @@ require "redis"
 require 'twitter-bootstrap-rails'
 require 'jquery-rails'
 require 'jquery-ui-rails'
+require 'will_paginate'
 require "redis_dictionary/engine"
 require "redis_dictionary/configuration"
 
