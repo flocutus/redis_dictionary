@@ -21,17 +21,15 @@
         <a href="<%= translations_path %>"><%= yield(:title) %></a>
       </h1>
 
-      <div class="navbar">
-        <div class="navbar-inner">
-          <%= link_to 'All', translations_path(query: "*"), class: 'btn' %>
-          <%= link_to 'Activerecord', translations_path(query: "activerecord"), class: 'btn' %>
-          <%= link_to 'Date / Time', translations_path(query: "date|time"), class: 'btn' %>
-          <%= link_to 'Error', translations_path(query: "error"), class: 'btn' %>
-          <%= link_to 'Number', translations_path(query: "number."), class: 'btn' %>
-          <%= link_to 'Pagination', translations_path(query: "paginate"), class: 'btn' %>
-          <%= link_to 'Codebooks', translations_path(query: "codebook"), class: 'btn' %>
-        </div>
-      </div>
+          <% if !RedisDictionary::configuration.menu_items.nil? %>
+            <div class="navbar">
+              <div class="navbar-inner">
+                <%RedisDictionary::configuration.menu_items.each do |name, query| %>
+                  <%= link_to name, translations_path(query: query), class: 'btn' %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
 
       <%= yield %>
     </div>

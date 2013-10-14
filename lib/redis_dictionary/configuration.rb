@@ -12,6 +12,8 @@ module RedisDictionary
     # Defaults to nil
     attr_accessor :layout
 
+    attr_accessor :menu_items
+
     def initialize
       @inline_main_app_named_routes = false
     end

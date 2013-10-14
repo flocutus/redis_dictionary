@@ -32,17 +32,7 @@ And finally execute:
 $ rails g redis_dictionary:install
 ```
 
-### IMPORTANT
-
-If you were installing before 5.10.2013, please remove this line: 
-
-``` ruby
-RedisDictionary::Engine.load!
-```
-
-from your ```config/initializers/redis_dictionary.rb``` to ```config/environment.rb```
-(now just reinstall and everything should be fine)
-Sorry for the inconvinience, and do not be affraid to write me if you need some help :)
+after install, look into initializer that was created for you, for now I added menu config in there
 
 
 ## Thanks

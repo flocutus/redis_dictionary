@@ -14,3 +14,16 @@ RedisDictionary::Engine.redis = TRANSLATION_STORE
 
 # default locale
 I18n.default_locale = :en
+
+# you can customize your menu here, you are given examples (name => regexp for search)
+RedisDictionary.configure do |config|
+  config.menu_items = {
+    'All' => '*',
+    'Activerecord' => 'activerecord',
+    'Date / Time' => 'date|time',
+    'Error' => 'error',
+    'Number' => 'unmber.',
+    'Pagination' => 'paginate',
+    'Codebooks' => 'codebook',
+  }
+end
